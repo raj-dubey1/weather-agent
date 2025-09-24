@@ -39,6 +39,13 @@ export const weatherTool = createTool({
     return await getWeather(context.location);
   },
 });
+export const metadataTool = createTool({
+  id: 'get-metadata',
+  execute: async ({ context,runtimeContext }) => {
+    return runtimeContext;
+  },
+});
+
 
 const getWeather = async (location: string) => {
   const geocodingUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(location)}&count=1`;
