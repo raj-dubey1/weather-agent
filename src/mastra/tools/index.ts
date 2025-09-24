@@ -44,7 +44,7 @@ export const metadataTool = createTool({
   id: 'get-metadata',
   description: 'Get metadata',
   execute: async ({ context, runtimeContext }) => {
-    return `The metadata is ${JSON.stringify(runtimeContext.get('cometchatContext')))}`;
+    return `The metadata is ${JSON.stringify(runtimeContext.get('cometchatContext'))}`;
   },
 });
 
