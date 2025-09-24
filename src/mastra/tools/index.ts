@@ -41,8 +41,9 @@ export const weatherTool = createTool({
 });
 export const metadataTool = createTool({
   id: 'get-metadata',
-  execute: async ({ context,runtimeContext }) => {
-    return runtimeContext;
+  description: 'Get metadata',
+  execute: async ({ context, runtimeContext }) => {
+    return runtimeContext.get('cometchatContext');
   },
 });
 
